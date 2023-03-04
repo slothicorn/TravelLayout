@@ -1,0 +1,113 @@
+@use '../abstracts' as *;
+
+.destination-description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+        margin-top: 4rem;
+        font-size: 9rem;
+        text-shadow: 0px 16px 21px rgba(0, 0, 0, 0.16);
+        line-height: 1.25;
+        margin-left: 3.5rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+        margin-left: 3.5rem;
+
+        position: relative;
+
+        &::before {
+            content: "";
+            height: 100%;
+            width: 4px;
+            background-color: $color-text-green;
+            position: absolute;
+            left: -3.5rem;
+            top: 0;
+        }
+    }
+
+    &__text {
+        font-size: clamp(1.6rem, 1.8vw, 2.8rem);
+        color: $color-text-grey;
+        max-width: 70%;
+    }
+
+    &__btn {
+        padding: 1.5rem 4.5rem;
+    }
+
+    &__slider {
+        overflow: hidden;
+        padding-bottom: 6rem;
+        margin-right: calc(-1 * var(--sizeContentOffset));
+    }
+
+    &__slider-controls {
+        position: absolute;
+        bottom: 9rem;
+        right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 4.5rem;
+        pointer-events: none;
+    }
+
+    &__button-prev, &__button-next {
+        width: 6rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        padding: 0.7rem;
+        color: $color-text-green;
+        background-color: rgba($color-white, .7);
+        cursor: pointer;
+        pointer-events: all;
+        transition: all .2s ease;
+
+        &:hover {
+            background-color: rgba($color-white, 1);
+            padding: 0.6rem;
+            color: $color-orange;
+        }
+    }
+
+    &__button-disabled {
+        visibility: hidden;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: clamp(1.8rem, 1.6vw, 2.6rem);
+        color: $color-text-green;
+        background-color: rgba($color-white, .7);
+        border-radius: 999px;
+        display: inline-block;
+        align-self: center;
+        padding: 1.5rem 2.5rem;
+        margin-left: auto;
+        margin-right: 1rem;
+        pointer-events: all;
+        transition: all .4s ease;
+
+        &:is(:hover, :focus, :active) {
+            background-color: rgba($color-white, 1);
+            color: $color-orange;
+        }
+    }
+
+    &__repeat-grid {
+        position: absolute;
+        right: calc(-1*var(--sizeContentOffset));
+        top: 23rem;
+        width: 10rem;
+        height: 32rem;
+        z-index: 10;
+    }
+}

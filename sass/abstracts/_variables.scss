@@ -1,0 +1,24 @@
+//COLORS
+$color-white: rgb(255, 255, 255);
+$color-black: rgba(0, 0, 0, 1);
+$color-orange: rgba(255, 136, 0, 1);
+$color-orange-darker: rgb(255, 94, 0);
+
+$color-text-green: rgba(13, 146, 6, 1);
+$color-text-green-dark: rgba(120, 147, 118, 1);
+$color-text-grey: rgba(125, 125, 125, 1);
+
+$color-text-shadow: rgba(0, 0, 0, 0.16);
+
+$color-box-shadow-social: rgba(0, 0, 0, 0.18);
+
+//SIZING
+:root{
+    --sizeContentWidth: 192rem;
+    --sizeContentOffset: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+//FONT-SIZES
+
+
+

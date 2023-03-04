@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.destination-image{
+    position: relative;
+
+    &__picture img {
+        position: absolute;
+        width: 110%;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    &__label {
+       position: absolute;
+       right: 0;
+       top: 7rem;
+    }
+
+    &__socials {
+        position: absolute;
+        left: 0;
+        top: 25rem;
+    }
+
+    &__show-more {
+        position: absolute;
+        left: 0;
+        bottom: 9rem;
+    }
+}
+

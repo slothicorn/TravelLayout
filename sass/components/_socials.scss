@@ -1,0 +1,51 @@
+@use '../abstracts' as *;
+
+.socials {
+    $block:&;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    line-height: initial;
+    align-items: start;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        border: 1px solid $color-text-green-dark;
+        border-radius: 999px;
+        color: $color-black;
+        font-size: clamp(1.8rem, 1.6vw, 2.6rem);
+
+        transition: all .4s ease;
+
+        &:is(:hover, :focus, :active) {
+            color: $color-white;
+            background-color: $color-text-green-dark;
+            box-shadow: 5px 14px 15px rgba(0, 0, 0, 0.18);
+
+            #{$block}__text {
+                max-width: 15rem;
+                color: $color-white;
+                margin-right: 3rem;
+            }
+        }
+    }
+
+    &__icon {
+        width: 3rem;
+        aspect-ratio: 1;
+        margin: 1.5rem;
+    }
+
+    &__text {
+        max-width: 0;
+        overflow: hidden;
+        line-height: 1;
+        transition: all .4s ease;
+        white-space: nowrap;
+        margin-right: 0;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+}

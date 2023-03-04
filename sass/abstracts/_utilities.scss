@@ -1,0 +1,11 @@
+@use '../abstracts/variables' as *;
+
+.u-text-wrapped {
+    display: inline-block;
+    max-width: 28rem;
+}
+
+.u-text-green {
+    color: $color-text-green;
+    font-size: 8.4rem;
+}

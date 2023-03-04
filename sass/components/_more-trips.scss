@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+.more-trips {
+    display: flex;
+    gap: 2.7rem;
+    align-items: center;
+    color: $color-text-green-dark;
+    font-size: clamp(1.8rem, 1.6vw, 2.6rem);
+    text-decoration: none;
+
+    transition: all .4s ease;
+
+    &__icon {
+        width: 6rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        padding: 1rem;
+        box-shadow: -8px 14px 27px rgba(0, 0, 0, 0.16);
+    }
+
+    &__text {
+        min-width: max-content;
+    }
+
+    &:is(:hover, :focus, :active) {
+        color: $color-orange;
+    }
+}

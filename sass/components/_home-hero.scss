@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.home-hero{
+
+    &__frame {
+        min-height: Min(100vh, 97rem);
+        max-width: var(--sizeContentWidth);
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: var(--sizeContentOffset);
+        padding-left: var(--sizeContentOffset);
+
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
