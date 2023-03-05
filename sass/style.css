@@ -330,6 +330,11 @@ body {
     padding: 2rem 0;
   }
 }
+@media (max-width: 25em) {
+  .destination-description__slider {
+    margin-right: 0;
+  }
+}
 .destination-description__slider-controls {
   position: absolute;
   bottom: 9rem;

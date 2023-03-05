@@ -68,6 +68,10 @@
         @media (max-width: 75em) {
             padding: 2rem 0;
         }
+
+        @media (max-width: 25em) {
+            margin-right: 0;
+        }
     }
 
     &__slider-controls {
