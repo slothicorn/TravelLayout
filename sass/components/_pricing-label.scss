@@ -32,4 +32,8 @@ flex-direction: column;
         font-size: clamp(1.6rem, 2vw, 3.2rem);
         padding-top: 1rem;
     }
+
+    @media (max-width: 43em) {
+        padding: 0.5rem 2.5rem 0.5rem 1rem;
+    }
 }

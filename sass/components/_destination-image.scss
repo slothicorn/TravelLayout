@@ -15,6 +15,7 @@
         @media (max-width: 87.5em) {
             position: relative;
             height: 100%;
+            max-width: 100%;
             width: auto;
             top: 0;
             left: 40%;
@@ -36,7 +37,11 @@
        @media (max-width: 87.5em) {
         right: auto;
         left: 50%;
-    }
+        }
+
+        @media (max-width: 43em) {
+            top: 4rem;
+        }
     }
 
     &__socials {
@@ -64,12 +69,13 @@
             right: 50%;
             transform: translateX(50%);
             bottom: 0;
-            margin-bottom: 4.5rem;
+            margin-bottom: 2.5rem;
         }
     }
 
     @media (max-width: 87.5em) {
         max-height: 50rem;
+        margin-bottom: 5rem;
     }
 }
 
