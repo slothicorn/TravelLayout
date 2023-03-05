@@ -8,21 +8,48 @@
     font-size: clamp(1.8rem, 1.6vw, 2.6rem);
     text-decoration: none;
 
-    transition: all .4s ease;
-
     &__icon {
-        width: 6rem;
+        width: clamp(3.5rem, 3.75vw, 6rem);
         aspect-ratio: 1;
         border-radius: 50%;
+        background-color: $color-white;
         padding: 1rem;
         box-shadow: -8px 14px 27px rgba(0, 0, 0, 0.16);
+
+        transition: all .4s ease;
+
+        @media (max-width: 75em) {
+            padding: .5rem;
+        }
     }
 
     &__text {
         min-width: max-content;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: $color-orange;
+
+            transition: all .4s ease;
+        }
     }
 
     &:is(:hover, :focus, :active) {
         color: $color-orange;
+    }
+
+    &:is(:hover, :focus, :active) &__text::after {
+        width: 100%;
+    }
+
+    &:is(:hover, :focus, :active) &__icon {
+        transform: rotate(-90deg);
+        box-shadow: -14px -8px 27px rgba(0, 0, 0, 0.16);
     }
 }

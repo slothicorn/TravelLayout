@@ -2,6 +2,8 @@
 
 .home-hero{
 
+    visibility: hidden;
+
     &__frame {
         min-height: Min(100vh, 97rem);
         max-width: var(--sizeContentWidth);
@@ -12,5 +14,9 @@
 
         display: grid;
         grid-template-columns: 50% 50%;
+
+        @media (max-width: 87.5em) {
+            grid-template-columns: 100%;
+        }
     }
 }
